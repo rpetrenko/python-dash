@@ -1,0 +1,63 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.dataTables.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dataTables.checkboxes.css')}}">
+</head>
+
+<script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='datatables.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='dataTables.checkboxes.min.js') }}"></script>
+<script src="{{ url_for('static', filename='data.json') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='page.js') }}"></script>
+
+<div class="well">
+    <form name="frm-example" id="frm-example">
+        <table id="example" class="display" cellspacing="0" width="100%">
+           <thead>
+              <tr>
+                 <th></th>
+                 <th>Disease State</th>
+                 <th>Recommendation</th>
+              </tr>
+           </thead>
+           <tfoot>
+              <tr>
+                 <th></th>
+                 <th>Disease State</th>
+                 <th>Recommendation</th>
+              </tr>
+           </tfoot>
+        </table>
+
+        <p class="form-group">
+           <button type="submit" class="btn btn-primary">Submit</button>
+        </p>
+
+    </form>
+</div>
+
+<div>
+    {% if result["res"] %}
+    <table>
+        <tr>
+            <th>PMPY Waste</th>
+            <th>Desease State</th>
+            <th>Recommendation</th>
+        </tr>
+        {% for r in result["res"] %}
+        <tr>
+            <td> {{ r[0]}}</td>
+            <td> {{ r[1] }}</td>
+            <td> {{ r[2] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td> {{ result["total"]}}</td>
+            <td></td>
+            <td>
+                Total Potential Waste (Savings)
+            </td>
+        </tr>
+    </table>
+
+    {% endif %}
+</div>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+      <title>AHS Research</title>
+    </head>
+    <body>
+    <h2> AHS </h2>
+        <form action="{{ url_for('submit')}}" method="post">
+            {{ form.csrf_token }}
+            {{ form.table_data() }}
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
+
+<!--
+            <table>
+                <tr>
+                    <th></th>
+                    <th> {{ form.col1 }}</th>
+                    <th> {{ form.col2 }}</th>
+                </tr>
+                {% for x in form.table_data %}
+                    <tr>
+                        <td>
+                        {{ x.location_id }}
+                        </td>
+                        <td>{{ x.col1 }}</td>
+                        <td>{{ x.col2 }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            -->
+
+

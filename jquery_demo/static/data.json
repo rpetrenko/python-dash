@@ -1,0 +1,84 @@
+{
+  "data": [
+    [
+      "1",
+      "Cardio",
+      "Don’t use coronary artery calcium scoring for patients with known coronary artery disease (including stents and bypass grafts)."
+    ],
+    [
+      "2",
+      "Cardio",
+      "Don’t use coronary computed tomography angiography in high risk* emergency department patients presenting with acute chest pain."
+    ],
+    [
+      "3",
+      "Cardio",
+      "Don’t perform coronary CMR in symptomatic patients with a history of coronary stents (might be a bit challenging to figure out a history)."
+    ],
+    [
+      "4",
+      "Cardio",
+      "Don’t perform stress cardiac imaging or advanced non-invasive imaging in the initial evaluation of patients without cardiac symptoms unless high-risk markers are present."
+    ],
+    [
+      "5",
+      "Cardio",
+      "Avoid nonsteroidal anti-inflammatory drugs (NSAIDS) in individuals with hypertension or heart failure or CKD of all causes including diabetes."
+    ],
+    [
+      "6",
+      "Cardio",
+      "Don’t use Vaughan-Williams Class Ic antiarrhythmic drugs as a 1st-line agent for the maintenance of sinus rhythm in patients with ischemic heart disease who have experienced prior myocardial infarction."
+    ],
+    [
+      "7",
+      "Endocrinology",
+      "Don’t use nuclear medicine thyroid scans to evaluate thyroid nodules in patients with normal thyroid gland function."
+    ],
+    [
+      "8",
+      "Endocrinology",
+      "Avoid using medications other than metformin to achieve hemoglobin A1c <7.5% in most older adults; moderate control is generally better."
+    ],
+    [
+      "9",
+      "Neurology/Pain",
+      "Don’t do a magnetic resonance imaging (MRI) scan of the spine or brain for patients with only peripheral neuropathy (without signs or symptoms suggesting a brain or spine disorder) "
+    ],
+    [
+      "10",
+      "Neurology/Pain",
+      "Don’t obtain imaging studies in patients with non-specific low back pain."
+    ],
+    [
+      "11",
+      "Neurology/Pain",
+      "Don’t do computed tomography (CT) for the evaluation of suspected appendicitis in children until after ultrasound has been considered as an option. "
+    ],
+    [
+      "12",
+      "Oncology",
+      "Don’t perform sentinel lymph node biopsy or other diagnostic tests for the evaluation of early; thin melanoma because they do not improve survival. "
+    ],
+    [
+      "13",
+      "Oncology",
+      "Don’t perform surveillance testing (biomarkers) or imaging (PET; CT; and radionuclide bone scans) for asymptomatic individuals who have been treated for breast cancer with curative intent."
+    ],
+    [
+      "14",
+      "RA",
+      "Don’t prescribe biologics for rheumatoid arthritis before a trial of methotrexate (or other conventional non-biologic DMARDs)"
+    ],
+    [
+      "15",
+      "Respiratory",
+      "Don’t order chest radiographs in children with uncomplicated asthma or bronchiolitis."
+    ],
+    [
+      "16",
+      "Respiratory",
+      "Don’t order more than one computerized tomography (CT) scan of the paranasal sinuses within 90 days to evaluate uncomplicated chronic rhinosinusitis patients when the paranasal sinus CT obtained is of adequate quality and resolution to be interpreted by the clinician and used for clinical decision-making and/or surgical planning."
+    ]
+  ]
+}
