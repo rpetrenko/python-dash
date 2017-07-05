@@ -9,6 +9,8 @@
 <script src="{{ url_for('static', filename='data.json') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='page.js') }}"></script>
 
+<h3> Metric Selection </h3>
+
 <div class="well">
     <form name="frm-example" id="frm-example">
         <table id="example" class="display" cellspacing="0" width="100%">
@@ -35,8 +37,11 @@
     </form>
 </div>
 
+
+<h3> Reports</h3>
 <div>
     {% if result["res"] %}
+    <h4> Report 1 by metric </h4>
     <table>
         <tr>
             <th>PMPY Waste</th>
