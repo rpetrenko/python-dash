@@ -51,11 +51,13 @@ def submit():
                     res.append(r)
                 res2 = []
                 percent_cum = 0
+                locale.setlocale(locale.LC_ALL, '')
                 for r in res:
                     percent = r[-1]/s * 100
                     percent_cum += percent
+                    r[-1] = locale.currency(int(r[-1]), grouping=True)
+                    r[-1] = "{}".format(r[-1][:-3])
                     res2.append(r + ["{0:.1f}".format(percent), "{0:.1f}".format(percent_cum)])
-                locale.setlocale(locale.LC_ALL, '')
                 s = locale.currency(s, grouping=True)
                 result = {"res": res2, "total": "{0}".format(s[:-3])}
     return render_template('page.html', result=result)
