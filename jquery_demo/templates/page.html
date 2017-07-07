@@ -44,23 +44,31 @@
     <h4> Report 1 by metric </h4>
     <table>
         <tr>
-            <th>PMPY Waste</th>
+            <th>Rank</th>
             <th>Desease State</th>
             <th>Recommendation</th>
+            <th>Savings</th>
+            <th>% Total</th>
+            <th>% Cumul</th>
         </tr>
         {% for r in result["res"] %}
         <tr>
             <td> {{ r[0]}}</td>
             <td> {{ r[1] }}</td>
             <td> {{ r[2] }}</td>
+            <td> {{ r[3] }}</td>
+            <td> {{ r[4] }}%</td>
+            <td> {{ r[5] }}%</td>
         </tr>
         {% endfor %}
         <tr>
-            <td> {{ result["total"]}}</td>
+            <td></td>
             <td></td>
             <td>
                 Total Potential Waste (Savings)
             </td>
+            <td> {{ result["total"]}}</td>
+            <td> 100% </td>
         </tr>
     </table>
 

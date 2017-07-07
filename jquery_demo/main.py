@@ -1,3 +1,4 @@
+import locale
 from flask import Flask, render_template, redirect
 from flask_wtf.csrf import CSRFProtect
 from flask import request
@@ -9,6 +10,10 @@ csrf = CSRFProtect(app)
 
 data = json.load(open("static/data.json"))
 wastes_data = json.load(open("static/wastes.json"))
+
+
+def price_to_int(v):
+    return int(v[1:].replace(',', ''))
 
 
 @app.route('/', methods=['GET'])
@@ -31,14 +36,28 @@ def submit():
                         rec_ids.append(row_id)
             res = []
             if rec_ids:
-                s = 0.0
+                s = 0
+                d = {}
                 for rec_id in rec_ids:
                     idx = rec_id - 1
-                    waste = wastes_data[idx]
-                    s += float(waste)
-                    r = [waste] + data['data'][idx][1:]
+                    rank = int(wastes_data[idx][0])
+                    savings = wastes_data[idx][1]
+                    # s += float(rank)
+                    d[rank] = data['data'][idx][1:] + [savings]
+                for k in sorted(d.keys()):
+                    v = d[k][:-1] + [price_to_int(d[k][-1])]
+                    r = [k] + v
+                    s += v[-1]
                     res.append(r)
-                result = {"res": res, "total": "{0:.2f}".format(s)}
+                res2 = []
+                percent_cum = 0
+                for r in res:
+                    percent = r[-1]/s * 100
+                    percent_cum += percent
+                    res2.append(r + ["{0:.1f}".format(percent), "{0:.1f}".format(percent_cum)])
+                locale.setlocale(locale.LC_ALL, '')
+                s = locale.currency(s, grouping=True)
+                result = {"res": res2, "total": "{0}".format(s[:-3])}
     return render_template('page.html', result=result)
 
 if __name__ == '__main__':
