@@ -42,10 +42,13 @@
 <div>
     {% if result["res"] %}
     <h4> Report 1 by metric </h4>
-    <table>
+    <table class="display dataTable">
+        <col width="20">
+        <col width="100">
+        <col width="400">
         <tr>
             <th>Rank</th>
-            <th>Desease State</th>
+            <th>Disease State</th>
             <th>Recommendation</th>
             <th>Savings</th>
             <th>% Total</th>
@@ -71,6 +74,12 @@
             <td> 100% </td>
         </tr>
     </table>
+
+    <div>
+        <img src="{{ url_for('static', filename='provider1.png') }}"
+             alt="Metrics by provider"
+             style="width:750px;height:600px;">
+    </div>
 
     {% endif %}
 </div>
