@@ -38,10 +38,10 @@
 </div>
 
 
-<h3> Reports</h3>
+<h1> Reports</h1>
 <div>
     {% if result["res"] %}
-    <h4> Report 1 by metric </h4>
+    <h2> Report 1 by metric </h2>
     <table class="display dataTable">
         <col width="20">
         <col width="100">
@@ -76,6 +76,8 @@
     </table>
 
     <div>
+        <h2> Physician Dashboard </h2>
+
         <img src="{{ url_for('static', filename='provider1.png') }}"
              alt="Metrics by provider"
              style="width:750px;height:600px;">
