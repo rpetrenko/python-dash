@@ -75,8 +75,46 @@
         </tr>
     </table>
 
+    <h2> Report #2 By Provider</h2>
+    <table class="display dataTable">
+        <col width="200">
+        <tr>
+            <td>Total Plan Cost</td>
+            <td>$100,000,000</td>
+        </tr>
+        <tr>
+            <td>Total Potential Savings</td>
+            <td>$5,000,000</td>
+        </tr>
+        <tr>
+            <td>% Savings</td>
+            <td>5.0 %</td>
+        </tr>
+    </table>
+
+    <table class="display dataTable">
+        <tr>
+            <th>Rank</th>
+            <th>Prescriber ID</th>
+            <th>Speciality/Sub-Speciality</th>
+            <th>Potential Savings</th>
+            <th>% Total</th>
+            <th>Cumul. %</th>
+        </tr>
+        {% for r in result["prov"] %}
+        <tr>
+            <td align="center">{{ r[0] }}</td>
+            <td align="center">{{ r[1] }}</td>
+            <td align="center">{{ r[2] }}</td>
+            <td align="center">{{ r[3] }}</td>
+            <td align="center">{{ r[4] }}</td>
+            <td align="center">{{ r[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
     <div>
-        <h2> Report #2 By Physician</h2>
+        <h2> Report #3 By Physician</h2>
 
         <img src="{{ url_for('static', filename='provider1.png') }}"
              alt="Metrics by provider"

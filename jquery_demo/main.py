@@ -10,7 +10,7 @@ csrf = CSRFProtect(app)
 
 data = json.load(open("static/data.json"))
 wastes_data = json.load(open("static/wastes.json"))
-
+provider_data = json.load(open("static/providers.json"))
 
 def price_to_int(v):
     return int(v[1:].replace(',', ''))
@@ -60,6 +60,7 @@ def submit():
                     res2.append(r + ["{0:.1f}".format(percent), "{0:.1f}".format(percent_cum)])
                 s = locale.currency(s, grouping=True)
                 result = {"res": res2, "total": "{0}".format(s[:-3])}
+            result["prov"] = provider_data
     return render_template('page.html', result=result)
 
 if __name__ == '__main__':
