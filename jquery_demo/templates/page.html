@@ -95,8 +95,8 @@
     <table class="display dataTable">
         <tr>
             <th>Rank</th>
-            <th>Prescriber ID</th>
-            <th>Speciality/Sub-Speciality</th>
+            <th align="left">Prescriber ID</th>
+            <th align="left">Speciality/Sub-Speciality</th>
             <th>Potential Savings</th>
             <th>% Total</th>
             <th>Cumul. %</th>
@@ -104,8 +104,8 @@
         {% for r in result["prov"] %}
         <tr>
             <td align="center">{{ r[0] }}</td>
-            <td align="center">{{ r[1] }}</td>
-            <td align="center">{{ r[2] }}</td>
+            <td align="left">{{ r[1] }}</td>
+            <td align="left">{{ r[2] }}</td>
             <td align="center">{{ r[3] }}</td>
             <td align="center">{{ r[4] }}</td>
             <td align="center">{{ r[5] }}</td>
